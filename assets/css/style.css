@@ -23,7 +23,15 @@ body{
 
 /*Header*/
 header{
-    background-color:lightcoral;
+    background-color:#ffffff;
+    padding 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    /*sets shadow around the edge. First value is horizontal offset (not needed at full width)*/
+    /*second value is vertical offset. positive values but shadow below the element, negative ones put it above*/
+    /*third value sets color*/
 }
 
 h1{
