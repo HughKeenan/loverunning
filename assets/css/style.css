@@ -92,6 +92,7 @@ nav{
 main{
     background-color: lightblue;
     flex: 1 0 auto; /*Ensures body will take up all space when there isn't enough content to scroll - will push footer down*/
+    margin-top:47px;
 }
 /*Footer*/
 footer{
