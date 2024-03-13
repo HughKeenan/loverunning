@@ -1,27 +1,24 @@
-/*Imported from Google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200..700&display=swap');
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-
-
-/*Asterisk wildcard selector to override default styles added by browser*/
-*{
-    padding:0;
-    margin:0;
-    /*below ensures that when setting height or width to an element, it will be applied to the whole thing, including the border*/
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-/*General style rules*/
+/* General styles */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /*Generic project styles*/
+    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
 
-/*Header*/
+/* Header */
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -29,9 +26,6 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
-    /*sets shadow around the edge. First value is horizontal offset (not needed at full width)*/
-    /*second value is vertical offset. positive values but shadow below the element, negative ones put it above*/
-    /*third value sets color*/
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -63,7 +57,7 @@ h1 {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/*Navbar styles with dropdown toggle*/
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -75,7 +69,7 @@ nav {
     top: 100%;
 }
 
-/*Nav toggle*/
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
@@ -88,48 +82,58 @@ nav {
     font-size: 2rem;
 }
 
-/*Main*/
-main{
+/* Main content */
+main {
     background-color: lightblue;
-    flex: 1 0 auto; 
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
     margin-top: 47px;
-    /*Ensures body will take up all space when there isn't enough content to scroll - will push footer down*/
 }
-/*Footer*/
-footer{
+
+/* Footer */
+footer {
     background-color: orange;
 }
 
-/*Media query - screen size 768px and up*/
-@media screen and (min-width:768px) {
-/*Header*/
-nav{
-    display: block;
-    position: relative;
-    box-shadow: none;
-    width: fit-content;
-    padding-right: none;
-}
-#menu{
-    display:flex;
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
 }
 
-#menu > li{
-    padding-left: 1rem;
-}
-
-.nav-toggle-label{
-    display: none;
-}
-
-#logo{
-    font-size: 280%;
-    line-height: 75px;*/
-    margin: 0 0.5rem;
-}
-
-main{
-    margin-top: 79px;
-}
-
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
+    }
 }
