@@ -25,6 +25,11 @@ h1, h2, h3 {
     color: #252525;
 }
 
+.hidden-heading{
+    /*Heading is hidden rather than removed because leaving it in means search engines can find it more easily*/
+    display:none;
+}
+
 /* Header */
 header {
     background-color: #ffffff;
