@@ -192,6 +192,18 @@ main {
     color: #fafafa;
 }
 
+/*Gallery page*/
+
+#photos img{
+    width:100%;
+    /*ensures there won't be overflow on mobile screens, overflow would have prevented the navbar from moving with the screen*/
+    line-height:1em;
+}
+
+#photos{
+    line-height:0;
+}
+
 /* Footer */
 #social-networks{
     text-align:center;
